@@ -9,6 +9,20 @@ export default class Saudacao extends Component {
     }
 
 
+    constructor(props) {
+        super(props)
+
+        // bind faz com que o this aponte para ele mesmo oupara o componente atual
+        this.setTipo = this.setTipo.bind(this)
+        //this.setNome = this.setNome.bind(this)
+
+        // para serinicado dentro do construtor precisa ter o this na frente
+        // this.state = {
+        //    tipo: this.props.tipo,
+        //    nome: this.props.nome
+    }
+
+
     //função para setar o valor no input (tipo)
     setTipo(e) {
         //função para alterar o estado
@@ -30,11 +44,12 @@ export default class Saudacao extends Component {
                 <hr />
                 {/* recebendo o valor referenciado */}
                 <input type="text" placeholder="Tipo..." value={tipo}
-                    onChange={e => this.setTipo(e)} />
+                    onChange={this.setTipo} />
 
                 {/* recebendo o valor referenciado */}
                 <input type="text" placeholder="Nome..." value={nome}
                     onChange={e => this.setNome(e)} />
+                {/* mais uma maneira de referenciar o this para o componente */}
             </div>
         )
     }
