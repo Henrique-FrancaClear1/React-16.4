@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import Pai from './componentes/Pai'
+import Filho from './componentes/Filho'
 
 //------------------------------------------
 //import Saudacao from './componentes/Saudacao'
@@ -18,7 +19,11 @@ import Pai from './componentes/Pai'
 ReactDOM.render(
     //para ter masi de um elemento pracisa de uma tag para envolver como o <div>
     <div>
-        <Pai nome="Paulo" sobrenome="Silva"/>
+        <Pai nome="Paulo" sobrenome="Silva">
+            <Filho nome="Pedro" />    
+            <Filho nome="Paulo" />    
+            <Filho nome="Carla" />    
+        </Pai>
     </div>
     , document.getElementById('root')) // root vem de index.html da pasta public
 
