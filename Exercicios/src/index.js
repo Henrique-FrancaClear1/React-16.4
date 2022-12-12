@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Saudacao from './componentes/Saudacao'
+import Pai from './componentes/Pai'
 
 //------------------------------------------
+//import Saudacao from './componentes/Saudacao'
 //import Primeiro from './componentes/Primeiro'
 //import BomDia from './componentes/BomDia'
 
@@ -17,7 +18,7 @@ import Saudacao from './componentes/Saudacao'
 ReactDOM.render(
     //para ter masi de um elemento pracisa de uma tag para envolver como o <div>
     <div>
-        <Saudacao tipo="Bom dia!" nome="João"/>
+        <Pai nome="Paulo" sobrenome="Silva"/>
     </div>
     , document.getElementById('root')) // root vem de index.html da pasta public
 
